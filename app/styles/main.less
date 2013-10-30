@@ -1,0 +1,51 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@icon-font-path: "../bower_components/bootstrap/fonts/";
+
+@import "../bower_components/font-awesome/less/font-awesome.less";
+@fa-font-path: "../bower_components/font-awesome/fonts";
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@import "variables.less";
+@import "header.less";
+@import "services.less";
+@import "portfolio.less";
+@import "quotes.less";
+@import "contact.less";
+@import "footer.less";
+@import "animations.less";
+
+.align-center {
+  text-align: center;
+}
+
+section > header {
+  padding: @line-height-computed * 2;
+  text-align: center;
+}
+
+img {
+  .img-responsive();
+}
+
+.btn-gray {
+  .button-variant(#969696; #c8c8c8; #c8c8c8);
+}
+
+.btn-outlined {
+  .button-variant(@white; fade(@white, 0%); @white);
+  .transition(all .1s linear);
+  &:hover {
+    color: @blue-dark;
+    background-color: @white;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}

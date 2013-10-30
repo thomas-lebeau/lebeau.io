@@ -1,0 +1,87 @@
+.services {
+  font-size: @font-size-large;
+  margin: 0 0 -8px;
+  background-color: @blue-darker;
+  border-top: 8px solid @blue-light;
+  .service {
+    position: relative;
+    top: -8px;
+  }
+  .service > div {
+    background-color: @blue-dark;
+    @media(min-width: @screen-sm) {height: 460px; }
+    @media(min-width: @screen-md) {height: 350px; }
+    @media(min-width: @screen-lg) {height: 290px; }
+    padding: @line-height-computed * 2;
+    text-align: center;
+    border-top: 8px solid;
+    & *{
+      position: relative;
+    }
+    &:before {
+      color: @blue-darker;
+      font-size: 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-family: FontAwesome;
+      overflow: hidden;
+    }
+    &:hover h3 {
+      color: @white;
+    }
+  }
+  .service > div:nth-of-type(1){
+    border-color: @red;
+    h3 {
+      color: @red;
+    }
+    &:before {
+      content: '\F121';
+    }
+    &:hover {
+      background-color: @red;
+      h3 {color: @white;}
+    }
+    &:hover:before {
+      color: @red-dark;
+    }
+  }
+  .service > div:nth-of-type(2){
+    background-color: @blue-darker;
+    border-color: @purple;
+    h3 {
+      color: @purple;
+    }
+    &:before {
+      color: @blue-dark;
+      content: '\F109';
+    }
+    &:hover {
+      background-color: @purple;
+      h3 {color: @white;}
+    }
+    &:hover:after,
+    &:hover:before {
+      color: @purple-dark;
+    }
+  }
+  .service > div:nth-of-type(3){
+    border-color: @green;
+    h3 {
+      color: @green;
+    }
+    &:before {
+      content: '\F002';
+    }
+    &:hover {
+      background-color: @green;
+      h3 {color: @white;}
+    }
+    &:hover:before {
+      color: @green-dark;
+    }
+  }
+}
