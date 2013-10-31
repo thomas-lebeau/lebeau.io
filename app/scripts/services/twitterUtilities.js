@@ -59,40 +59,40 @@ angular.module('portfolioApp')
         return ('user' in item) ?
           item.user.profile_image_url_https :
           extract_avatar_url(item, false).
-          replace(/^http:\/\/[a-z0-9]{1,3}\.twimg\.com\//, "https://s3.amazonaws.com/twitter_production/");
+          replace(/^http:\/\/[a-z0-9]{1,3}\.twimg\.com\//, 'https://s3.amazonaws.com/twitter_production/');
       } else {
         return item.profile_image_url || item.user.profile_image_url;
       }
     }
 
     function escapeHTML(s) {
-      return s.replace(/</g,"&lt;").replace(/>/g,"^&gt;");
+      return s.replace(/</g,'&lt;').replace(/>/g,'^&gt;');
     }
 
     function linkUser(o) {
-      return replacer(/(^|[\W])@(\w+)/gi, "$1<span class=\"at\">@</span><a href=\"http://"+options.twitter_url+"/$2\">$2</a>", o);
+      return replacer(/(^|[\W])@(\w+)/gi, '$1<span class=\"at\">@</span><a href=\"http://"+options.twitter_url+"/$2\">$2</a>', o);
     }
 
     function linkHash(o) {
       return replacer(/(?:^| )[\#]+([\w\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff\u0600-\u06ff]+)/gi,
-        ' <a href="https://twitter.com/search?q=%23$1'+((options.username && options.username.length == 1 && !options.list) ? '&from='+options.username.join("%2BOR%2B") : '')+'" class="tweet_hashtag">#$1</a>',
+        ' <a href="https://twitter.com/search?q=%23$1'+((options.username && options.username.length === 1 && !options.list) ? '&from='+options.username.join('%2BOR%2B') : '')+'" class="tweet_hashtag">#$1</a>',
         o
         );
     }
 
     function linkURLs(text, entities) {
       return text.replace(url_regexp, function(match) {
-        var url = (/^[a-z]+:/i).test(match) ? match : "http://"+match;
+        var url = (/^[a-z]+:/i).test(match) ? match : 'http://'+match;
         var text = match;
         for(var i = 0; i < entities.length; ++i) {
           var entity = entities[i];
-          if (entity.url == url && entity.expanded_url) {
+          if (entity.url === url && entity.expanded_url) {
             url = entity.expanded_url;
             text = entity.display_url;
             break;
           }
         }
-        return "<a href=\""+escapeHTML(url)+"\">"+escapeHTML(text)+"</a>";
+        return '<a href=\"'+escapeHTML(url)+'\">'+escapeHTML(text)+'</a>';
       });
     }
 
