@@ -29,8 +29,48 @@
     max-height: 0px;
   }
 }
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 0px;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 0px;
+  }
+}
 
 @-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    max-height: 0px;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+@-moz-keyframes fade-out {
+  from {
+    opacity: 1;
+    max-height: 0px;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+@keyframes fade-out {
   from {
     opacity: 1;
     max-height: 0px;
@@ -46,8 +86,10 @@
 .portfolio {
   position: relative;
   overflow: hidden;
-  -webkit-perspective: 1200px;
+  .perspective(1200px);
   -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .rotate-right-animation,

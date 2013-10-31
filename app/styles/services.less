@@ -1,20 +1,17 @@
 .services {
   font-size: @font-size-large;
-  margin: 0 0 -8px;
   background-color: @blue-darker;
   border-top: 8px solid @blue-light;
   .service {
     position: relative;
-    top: -8px;
   }
   .service > div {
     background-color: @blue-dark;
-    @media(min-width: @screen-sm) {height: 460px; }
-    @media(min-width: @screen-md) {height: 350px; }
-    @media(min-width: @screen-lg) {height: 290px; }
+    @media(min-width: @screen-sm) {height: 452px; }
+    @media(min-width: @screen-md) {height: 342px; }
+    @media(min-width: @screen-lg) {height: 282px; }
     padding: @line-height-computed * 2;
     text-align: center;
-    border-top: 8px solid;
     & *{
       position: relative;
     }
@@ -28,6 +25,15 @@
       height: 100%;
       font-family: FontAwesome;
       overflow: hidden;
+    }
+    &:after {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      top: -8px;
+      left: 0;
+      background-color: @red;
     }
     &:hover h3 {
       color: @white;
@@ -59,6 +65,9 @@
       color: @blue-dark;
       content: '\F109';
     }
+    &:after {
+      background-color: @purple;
+    }
     &:hover {
       background-color: @purple;
       h3 {color: @white;}
@@ -75,6 +84,9 @@
     }
     &:before {
       content: '\F002';
+    }
+    &:after {
+      background-color: @green;
     }
     &:hover {
       background-color: @green;
