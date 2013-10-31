@@ -1,11 +1,10 @@
-/* global $ */
 'use strict';
 
 angular.module('portfolioApp')
   .directive('ngScroll', function () {
     return {
-      link: function (scope, element, attrs) {
-        $(element).perfectScrollbar();
+      link: function (scope, element) {
+        angular.element(element).perfectScrollbar();
       }
     };
   });
