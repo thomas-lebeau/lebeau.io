@@ -9,7 +9,7 @@ angular.module('portfolioApp')
     $scope.tweets = [];
     $scope.loaded = false;
     var tweets = [];
-    var proxyUrl = '/portfolio/twitter/';
+    var proxyUrl = 'twitter/';
     var params = {
       request: {
         host: 'api.twitter.com',

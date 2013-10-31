@@ -85,7 +85,7 @@
               </div>
             </div>
             <div class="col-sm-6 twitter" ng-controller="TwitterCtrl">
-              <!-- <div class="loading" ng-hide="loaded"><i class="fa fa-spinner fa-spin fa-5x"></i> </div> -->
+              <div class="loading" ng-hide="loaded"><i class="fa fa-spinner fa-spin fa-5x"></i> </div>
               <div ng-repeat="tweet in tweets" class="fade-animation">
                 <div class="text" ng-bind-html="tweet.tweet_text"></div>
                 <div class="meta">
@@ -161,6 +161,7 @@
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/perfect-scrollbar/src/jquery.mousewheel.js"></script>
     <script src="bower_components/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+    <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
     <script src="bower_components/angular/angular.js"></script>
