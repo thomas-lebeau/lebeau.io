@@ -31,8 +31,8 @@ module.exports = function (grunt) {
         tasks: ['recess']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['copy:styles', 'autoprefixer']
+        files: ['.tmp/styles/{,*/}*.css'],
+        tasks: ['copy:styles']
       },
       livereload: {
         options: {
@@ -47,7 +47,6 @@ module.exports = function (grunt) {
       }
     },
     autoprefixer: {
-      options: ['last 1 version'],
       dist: {
         files: [{
           expand: true,
@@ -256,8 +255,8 @@ module.exports = function (grunt) {
       },
       styles: {
         expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
+        cwd: '.tmp/styles',
+        dest: '<%= yeoman.app %>/styles/',
         src: '{,*/}*.css'
       }
     },
