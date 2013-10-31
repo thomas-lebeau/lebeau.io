@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="bower_components/perfect-scrollbar/src/perfect-scrollbar.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient { filter: none; }
+      </style>
+    <![endif]-->
 </head>
   <body ng-app="portfolioApp">
     <!--[if lt IE 7]>
@@ -63,7 +69,7 @@
         <div ng-view class="{{animation}}"></div>
       </section>
 
-      <section class="quotes">
+      <section class="quotes gradient">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 testimonial" ng-controller="TestimonialCtrl">
