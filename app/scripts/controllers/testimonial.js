@@ -13,7 +13,11 @@ angular.module('portfolioApp')
     if (testimonials.length > 1){
       $scope.swapTestimonial = function () {
         timer = $timeout(function () {
-            (index < testimonials.length - 1) ? index++ : index = 0;
+            if (index < testimonials.length - 1) {
+              index++;
+            } else {
+              index = 0;
+            }
             $scope.testimonials.shift();
             $scope.testimonials.push(testimonials[index]);
             $scope.swapTestimonial();

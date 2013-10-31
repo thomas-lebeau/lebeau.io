@@ -1,4 +1,6 @@
+/* jshint camelcase:false */
 /* global jQuery */
+
 'use strict';
 
 angular.module('portfolioApp')
@@ -43,7 +45,11 @@ angular.module('portfolioApp')
       if (tweets.length > 1) {
         $scope.swapTweet = function () {
           timer = $timeout(function () {
-            (index < tweets.length - 1) ? index++ : index = 0;
+            if (index < tweets.length - 1) {
+              index++;
+            } else {
+              index = 0;
+            }
             $scope.tweets.shift();
             $scope.tweets.push(tweets[index]);
             $scope.swapTweet();
