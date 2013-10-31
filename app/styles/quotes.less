@@ -13,6 +13,9 @@
     padding-top: @line-height-computed * 4;
     padding-bottom: @line-height-computed * 2;
     height: 280px;
+    @media(min-width: @screen-sm-min) {height: 380px; }
+    @media(min-width: @screen-md-min) {height: 330px; }
+    @media(min-width: @screen-lg-min) {height: 290px; }
     & * {
       position: relative;
     }
