@@ -4,6 +4,14 @@ angular.module('portfolioApp')
   .service('Projects', function Projects() {
   var projects = [
     {
+      name: 'Emka Yapi',
+      slug: 'emkayapi',
+      categories: ['design', 'development', 'wordpress'],
+      detail: '',
+      date: '2013-09-12',
+      url: 'http://emkayapi.com.com'
+    },
+    {
       name: 'Usta Evinizde',
       slug: 'ustaevinizde',
       categories: ['design', 'development'],
