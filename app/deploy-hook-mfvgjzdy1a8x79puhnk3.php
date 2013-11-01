@@ -18,11 +18,11 @@ function syscall ($cmd, $cwd) {
 try{
   if( $HTTP_RAW_POST_DATA ){
     if( $oData = json_decode( $HTTP_RAW_POST_DATA ) ){
-      if( ( $branch = array_pop( preg_split("/[\/]+/", $oData->ref) ) ) != $branch ){
+      if( ( $branch = array_pop( preg_split("/[\/]+/", $oData->ref) ) ) === $branch ){
            $result = syscall("git pull", "$wd");
            return 1;
       } else {
-        throw new Exception("branch variable is not set or !== to '$branch'");
+        throw new Exception("branch variable is not set or === to '$branch'");
       }
     } else {
       throw new Exception("An error was encountered while attempting to json_decode the HTTP_RAW_POST_DATA str");
