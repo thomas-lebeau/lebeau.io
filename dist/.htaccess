@@ -247,14 +247,18 @@ AddDefaultCharset utf-8
 # </IfModule>
 
 # ------------------------------------------------------------------------------
-# | Redirect crawling bots to pre-generated snapshot (http://getseojs.com/)    |
+# | Redirect crawling bots to pre-generated snapshot (http://prerender.io/)    |
 # ------------------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
-    RewriteCond %{QUERY_STRING}  _escaped_fragment_=  [NC]
-    RewriteRule ^(.*)$ http://cdn.getseojs.com/v2/1g3JbD2e9q/%{REQUEST_SCHEME}://%{HTTP_HOST}:%{SERVER_PORT}/$1 [P,QSA,L]
+    <IfModule mod_proxy_http.c>
+        # Enable prerendering for .html and directory index files
+        RewriteCond %{HTTP_USER_AGENT} googlebot|yahoo|bingbot|baiduspider [NC,OR]
+        RewriteCond %{QUERY_STRING} _escaped_fragment_|prerender=1
+        RewriteCond %{HTTP_USER_AGENT} !^Prerender
+        RewriteRule ^(.*\.html)?$ http://prerender.herokuapp.com/http://lebeau.io/$1 [P,L]
+    </IfModule>
 </IfModule>
-
 
 # ##############################################################################
 # # SECURITY                                                                   #
