@@ -13,7 +13,37 @@ angular.module('portfolioApp')
       categories: ['design', 'development', 'wordpress'],
       detail: '',
       date: '2013-09-12',
-      url: 'http://emkayapi.com.com'
+      url: 'http://emkayapi.com.tr'
+    },
+    {
+      name: 'Newage Clinic',
+      slug: 'newageclinic',
+      image: {
+        filename: 'newage',
+        ext: 'jpg'
+      },
+      categories: ['wordpress integration'],
+      url: 'http://newage-clinic.com'
+    },
+    {
+      name: 'Atasan',
+      slug: 'atasan',
+      image: {
+        filename: 'atasan',
+        ext: 'jpg'
+      },
+      categories: ['design'],
+      url: 'http://atasan.com'
+    },
+    {
+      name: 'Code Bounty',
+      slug: 'codebounty',
+      image: {
+        filename: 'codebounty',
+        ext: 'jpg'
+      },
+      categories: ['development'],
+      url: 'http://codebounty.co'
     },
     {
       name: 'Usta Evinizde',
@@ -38,6 +68,16 @@ angular.module('portfolioApp')
       url: 'http://carnaist.com'
     },
     {
+      name: 'Mete Aksu Clinic',
+      slug: 'meteaksu',
+      image: {
+        filename: 'meteaksu',
+        ext: 'jpg'
+      },
+      categories: ['wordpress integration'],
+      url: 'http://meteaksu.com'
+    },
+    {
       name: 'Farklı İnşaat',
       slug: 'farkliinsaat',
       image: {
@@ -58,26 +98,6 @@ angular.module('portfolioApp')
       url: 'http://haticeatik.com'
     },
     {
-      name: 'Ergi Yapı',
-      slug: 'ergiyapi',
-      image: {
-        filename: 'ergiyapi',
-        ext: 'jpg'
-      },
-      categories: ['design', 'development'],
-      url: 'http://ergiyapi.com'
-    },
-    {
-      name: 'Newage Clinic',
-      slug: 'newageclinic',
-      image: {
-        filename: 'newage',
-        ext: 'jpg'
-      },
-      categories: ['wordpress integration'],
-      url: 'http://newage-clinic.com'
-    },
-    {
       name: 'Tiyatrol',
       slug: 'tiyatrol',
       image: {
@@ -86,16 +106,6 @@ angular.module('portfolioApp')
       },
       categories: ['wordpress integration'],
       url: 'http://tiyatrol.net'
-    },
-    {
-      name: 'Mete Aksu Clinic',
-      slug: 'meteaksu',
-      image: {
-        filename: 'meteaksu',
-        ext: 'jpg'
-      },
-      categories: ['wordpress integration'],
-      url: 'http://meteaksu.com'
     },
     // {
     //   name: 'RDS Reklam',
@@ -139,16 +149,6 @@ angular.module('portfolioApp')
     //   categories: ['development'],
     //   url: 'http://chameleonreklam.com'
     // },
-    {
-      name: 'Atasan',
-      slug: 'atasan',
-      image: {
-        filename: 'atasan',
-        ext: 'jpg'
-      },
-      categories: ['design'],
-      url: 'http://atasan.com'
-    },
     // {
     //   name: 'Arena',
     //   slug: 'arena',
@@ -165,14 +165,14 @@ angular.module('portfolioApp')
       url: 'http://alenireklam.com'
     },
     {
-      name: 'Code Bounty',
-      slug: 'codebounty',
+      name: 'Ergi Yapı',
+      slug: 'ergiyapi',
       image: {
-        filename: 'codebounty',
+        filename: 'ergiyapi',
         ext: 'jpg'
       },
-      categories: ['development'],
-      url: 'http://codebounty.co'
+      categories: ['design', 'development'],
+      url: 'http://ergiyapi.com'
     }
   ];
 
