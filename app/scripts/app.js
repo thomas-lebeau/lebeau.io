@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'ngResource'])
+angular.module('portfolioApp', ['ngRoute', 'ngAnimate', 'ngResource', 'angulartics', 'angulartics.google.analytics', 'angulartics.scroll'])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
