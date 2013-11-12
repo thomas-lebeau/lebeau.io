@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         tasks: ['recess']
       },
       styles: {
-        files: ['.tmp/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['copy:styles']
       },
       livereload: {
@@ -256,8 +256,8 @@ module.exports = function (grunt) {
       },
       styles: {
         expand: true,
-        cwd: '.tmp/styles',
-        dest: '<%= yeoman.app %>/styles/',
+        cwd: '<%= yeoman.app %>/styles',
+        dest: '.tmp/styles/',
         src: '{,*/}*.css'
       }
     },
