@@ -245,7 +245,7 @@ module.exports = function (grunt) {
             '.htaccess',
             // 'bower_components/**/*',
             'images/{,*/}*.{gif,webp}',
-            'styles/fonts/*',
+            'fonts/**/*',
             'twitter/**/*'
           ]
         }, {
@@ -262,20 +262,38 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      fonts: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/bower_components/font-awesome/fonts/',
+          dest: '<%= yeoman.app %>/fonts/font-awesome/',
+          src: '*'
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/bower_components/bootstrap/fonts/',
+          dest: '<%= yeoman.app %>/fonts/glyphicons/',
+          src: '*'
+        }]
       }
     },
     concurrent: {
       server: [
         'coffee:dist',
-        'copy:styles'
+        'copy:styles',
+        'copy:fonts'
       ],
       test: [
         'coffee',
-        'copy:styles'
+        'copy:styles',
+        'copy:fonts'
       ],
       dist: [
         'coffee',
         'copy:styles',
+        'copy:fonts',
         'imagemin',
         'svgmin',
         'htmlmin'
