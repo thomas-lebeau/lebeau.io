@@ -15,7 +15,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="styles/fb8e7549.main.css">
+    <link rel="stylesheet" href="styles/09d97f20.main.css">
 
     <!--[if gte IE 9]>
       <style type="text/css">
@@ -44,7 +44,7 @@
 
     <div class="content">
 
-      <section class="services">
+      <section class="services" analytics-on="scrollby" analytics-event="ScrollByServices">
         <div class="container">
           <div class="service row">
             <div class="col-sm-4">
@@ -67,7 +67,7 @@
         <div ng-view="" class="{{animation}}"></div>
       </section>
 
-      <section class="quotes gradient">
+      <section class="quotes gradient" analytics-on="scrollby" analytics-event="ScrollByQuotes">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 testimonial" ng-controller="TestimonialCtrl">
@@ -96,7 +96,7 @@
         </div>
       </section>
 
-      <section class="contact" ng-controller="ContactCtrl">
+      <section class="contact" ng-controller="ContactCtrl" analytics-on="scrollby" analytics-event="ScrollByContact">
         <div class="container">
           <header class="row align-center">
             <h2>Get in Touch!</h2>
@@ -154,28 +154,23 @@
       </footer>
     </div> <!-- /content -->
 
-    <script src="scripts/91af3cf9.main.js"></script>
+    <script src="scripts/9c4db4cf.scripts.js"></script>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="scripts/95a6c674.angular.js"></script>
 
-    <script src="scripts/21863bac.ng-scripts.js"></script>
+    <script src="scripts/f89e36d4.ng-scripts.js"></script>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <!--
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-XXXXX-X');
-      ga('send', 'pageview');
+      ga('create', 'UA-31879815-1', 'lebeau.io');
+      // ga('send', 'pageview');
     </script>
-    -->
 
 </body>
 </html>

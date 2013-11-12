@@ -7,7 +7,7 @@
     <ul class="thumbnails">
       <li class="thumbnail col-xs-6 col-sm-3" ng-repeat="project in projects">
         <a href="#!/portfolio/{{project.slug}}" ng-click="animate('rotate-left')">
-          <img ng-src="images/portfolio/{{project.image.filename}}-thumb.{{project.image.ext}}" err-src="images/portfolio/default-thumb.png" alt="{{project.name}}">
+          <img ng-src="images/portfolio/{{project.image.filename}}-thumb.{{project.image.ext}}" err-src="images/portfolio/default-thumb.png" alt="{{project.name}}" width="384" height="384">
           <div class="hover-card">
             <h4>{{project.name}}</h4>
             <div class="categories"><p><i class="fa fa-tags fa-fw"></i> <span ng-repeat-start="category in project.categories">{{category}}</span><i class="category-separator" ng-repeat-end>, </i></p></div>
