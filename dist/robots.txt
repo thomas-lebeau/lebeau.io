@@ -1,4 +1,4 @@
 # robotstxt.org
 
 User-agent: *
-Sitemap: http://cdn.getseojs.com/sitemaps/demo.lebeau.io/sitemap.xml.gz
+Sitemap: http://lebeau.io/sitemap.xml
