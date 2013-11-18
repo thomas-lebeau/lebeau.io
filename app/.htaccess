@@ -256,7 +256,7 @@ AddDefaultCharset utf-8
         RewriteCond %{HTTP_USER_AGENT} googlebot|yahoo|bingbot|baiduspider [NC,OR]
         RewriteCond %{QUERY_STRING} _escaped_fragment_|prerender=1
         RewriteCond %{HTTP_USER_AGENT} !^Prerender
-        RewriteRule ^(.*\.html)?$ http://prerender.lebeau.io/http://lebeau.io/$1 [P,L]
+        RewriteRule ^(.*\.html)?$ http://prerender-lebeau-io.herokuapp.com/http://lebeau.io/$1 [P,L]
     </IfModule>
 </IfModule>
 
