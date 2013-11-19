@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
- <url><loc>http://lebeau.io</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/emkayapi</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/newageclinic</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/atasan</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/codebounty</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/ustaevinizde</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/carnaist</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/meteaksu</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/farkliinsaat</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/haticehatik</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/tiyatrol</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/eceabatpansiyon</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/renee</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/gundertekstil</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/alenireklam</loc><changefreq>weekly</changefreq></url>
- <url><loc>http://lebeau.io/#!/portfolio/ergiyapi</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/emkayapi</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/newageclinic</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/atasan</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/codebounty</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/ustaevinizde</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/carnaist</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/meteaksu</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/farkliinsaat</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/haticehatik</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/tiyatrol</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/eceabatpansiyon</loc><changefreq>weekly</changefreq></url >
+  <url><loc>http://lebeau.io/#!/portfolio/renee</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/gundertekstil</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/demiroguz</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/alenireklam</loc><changefreq>weekly</changefreq></url>
+  <url><loc>http://lebeau.io/#!/portfolio/ergiyapi</loc><changefreq>weekly</changefreq></url>
 </urlset>

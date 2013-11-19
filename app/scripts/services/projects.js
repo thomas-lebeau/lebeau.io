@@ -143,6 +143,16 @@ angular.module('portfolioApp')
       categories: ['design', 'development', 'admin panel'],
       url: 'http://gundertekstil.com.tr'
     },
+    {
+      name: 'Oguz Demir',
+      slug: 'demiroguz',
+      image: {
+        filename: 'oguz',
+        ext: 'jpg'
+      },
+      categories: ['development'],
+      url: 'http://demiroguz.com'
+    },
     // {
     //   name: 'Chameleon Reklam',
     //   slug: 'chameleon',
