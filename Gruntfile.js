@@ -246,7 +246,8 @@ module.exports = function (grunt) {
             // 'bower_components/**/*',
             'images/{,*/}*.{gif,webp}',
             'fonts/**/*',
-            'twitter/**/*'
+            'twitter/**/*',
+            'scripts/**/*.php'
           ]
         }, {
           expand: true,
