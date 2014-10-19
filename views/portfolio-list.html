@@ -1,0 +1,28 @@
+<div class="container portfolio-list">
+  <header class="row align-center">
+    <h2>Some of my works</h2>
+    <p>The best way to understand what I do is to see what I have done. Here is a selection of sites that I have built recently.</p>
+  </header>
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="thumbnail col-xs-6 col-sm-3" ng-repeat="project in projects">
+        <a href="#!/portfolio/{{project.slug}}" ng-click="animate('rotate-left')">
+          <img ng-src="images/portfolio/{{project.image.filename}}-thumb.{{project.image.ext}}" err-src="images/portfolio/default-thumb.png" alt="{{project.name}}" width="384" height="384">
+          <div class="hover-card">
+            <h4>{{project.name}}</h4>
+            <div class="categories"><p><i class="fa fa-tags fa-fw"></i> <span ng-repeat-start="category in project.categories">{{category}}</span><i class="category-separator" ng-repeat-end>, </i></p></div>
+          </div>
+        </a>
+      </li>
+      <li class="thumbnail col-xs-6 col-sm-3">
+        <div class="img-card"><img src="images/portfolio/new-project.png" alt="Your Project Here?" class="no-transform"></div>
+        <div class="hover-card">
+          <h4>Your Project Here?</h4>
+          <div class="categories">
+            <p>Ask for a Quote</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
