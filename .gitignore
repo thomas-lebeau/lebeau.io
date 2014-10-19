@@ -2,6 +2,7 @@ node_modules
 npm-debug.log
 .tmp
 .sass-cache
+.grunt
 dist/
 app/bower_components
 app/styles/main.css
