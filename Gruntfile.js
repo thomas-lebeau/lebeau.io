@@ -87,6 +87,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
+          open:true,
           base: '<%= yeoman.dist %>'
         }
       }
@@ -341,7 +342,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['connect:dist:keepalive']);
     }
 
     grunt.task.run([
@@ -353,6 +354,9 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
+
+
+  grunt.registerTask('serve', ['server']);
 
   grunt.registerTask('test', [
     'clean:server',
@@ -383,5 +387,10 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('publish', [
+    'build',
+    'gh-pages'
   ]);
 };
