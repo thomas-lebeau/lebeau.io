@@ -107,7 +107,6 @@
               <p>You have a website project you want me to work on? Let's start now, drop me a line.</p>
             </div>
           </header>
-          <!-- <form method="post" action="scripts/php/mail.php"> -->
           <form name="contactForm" ng-submit="sendEmail()">
             <div class="row">
               <div class="col-sm-6 col-md-5 col-md-offset-1">
@@ -117,7 +116,7 @@
                 </div>
                 <div class="form-group">
                   <label for="email" class="sr-only">E-mail:</label>
-                  <input type="email" class="form-control input-lg" id="email" name="email" placeholder="email" ng-model="email.email" required>
+                  <input type="email" class="form-control input-lg" id="email" name="email" placeholder="email" ng-model="email._replyto" required>
                 </div>
               </div>
               <div class="col-sm-6 col-md-5">

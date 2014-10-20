@@ -4,41 +4,64 @@
 angular.module('portfolioApp')
   .controller('ContactCtrl', function ($scope, $http, $sce, $analytics) {
 
-    $scope.email = {};
+    $scope.email = {
+      _subject: '[lebeau.io] new message'
+    };
     $scope.validation = {};
     $scope.sendButton = {
-      status: 'enabled',
-      text: $sce.trustAsHtml('<i class="fa fa-envelope-o"></i> Send')
+      status: '',
+      text: ''
     };
 
-    var url = 'scripts/php/mail.php';
+    var url = '//forms.brace.io/lebeau.thomas@gmail.com';
+
+    function setStatus(status){
+      switch(status) {
+        case 'sending':
+          $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-spinner fa-spin"></i> Sending');
+          $scope.sendButton.status = 'disabled';
+        case 'success':
+          $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-check success"></i> thank you!');
+          $scope.sendButton.status = 'disabled';
+          break;
+        case 'error':
+          $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-times error"></i> Oops, something\'s wrong!');
+          $scope.sendButton.status = 'enabled';
+          break;
+        default:
+          $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-envelope-o"></i> Send');
+          $scope.sendButton.status = 'enabled';
+      }
+    }
+
+    // initialise the sendButton
+    setStatus();
 
     $scope.sendEmail = function () {
 
       $analytics.eventTrack('SendTotal', {category: 'contactForm'});
-      $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-spinner fa-spin"></i> Sending');
+      setStatus('sending');
       if ($scope.contactForm.$valid && $scope.contactForm.$dirty) {
-        $http({
-          method: 'POST',
+        jQuery.ajax({
           url: url,
-          data: jQuery.param($scope.email),
-          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+          method: 'POST',
+          data: $scope.email,
+          dataType: 'json'
         }).success(function (data) {
-          if (data.status === 'ok') {
-            $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-check success"></i> thank you!');
-            $scope.sendButton.status = 'disabled';
+          if (data.success === 'Email sent') {
+            setStatus('success');
             $scope.email = {};
             $analytics.eventTrack('SendSuccess', {category: 'contactForm'});
           } else {
-            $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-times error"></i> Oops, something\'s wrong!');
+            setStatus('error');
             $analytics.eventTrack('SendErrorDataEmpty', {category: 'contactForm'});
           }
         }).error( function () {
-          $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-times error"></i> Oops, something\'s wrong!');
+          setStatus('error');
           $analytics.eventTrack('SendErrorXHR', {category: 'contactForm'});
         });
       }else {
-        $scope.sendButton.text = $sce.trustAsHtml('<i class="fa fa-times error"></i> Oops, something\'s wrong!');
+        setStatus('error');
         $analytics.eventTrack('SendErrorFormInvalid', {category: 'contactForm'});
       }
     };
