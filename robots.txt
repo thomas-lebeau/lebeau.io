@@ -1,4 +1,2 @@
-# robotstxt.org
-
 User-agent: *
-Sitemap: http://lebeau.io/sitemap.xml
+Disallow:
