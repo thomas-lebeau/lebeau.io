@@ -1,7 +1,15 @@
 language: node_js
+
+os:
+  - linux
+  - osx
+
 node_js:
-  - '0.8'
-  - '0.10'
-before_script:
-  - 'npm install -g bower grunt-cli'
-  - 'bower install'
+  - "node"
+  - "lts/*"
+  - "7"
+  - "8"
+
+script:
+  - npm install
+  - npm run lint
